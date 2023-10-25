@@ -1,0 +1,57 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* Estilos del header */
+header {
+    background-color: #87CEEB;
+    width: 100%; 
+    height: 100%; 
+    position:relative;
+    top: 0;
+    transition: background-color 0.3s; /* Transición de color al pasar el ratón */
+}
+
+nav ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: flex; 
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 100%; /* Ajusta la altura de los elementos */
+}
+
+nav li {
+    text-align: center;
+    
+}
+
+
+/* Estilos de los enlaces en el menú */
+.menu-item {
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s, background-color 0.3s; /* Transición de color al pasar el ratón */
+    padding: 10px 20px; 
+    @media only screen and (max-width: 600px) {
+        font-size: 15px;
+      }
+}
+
+.menu-item:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el ratón */
+    background-color: #333; /* Cambia el color de fondo al pasar el ratón oscuro */
+}
+
+/* Cambiar el color del fondo del header al pasar el ratón */
+header:hover {
+    background-color: #ff5a5a; /* Cambia a rojo al pasar el ratón */
+    transition: background-color 0.3s;
+}
+
