@@ -8,27 +8,27 @@ const server = http.createServer((request, response) => {
 
     if (path === '/' || path === '/index.html') {
         response.statusCode = 200;
-        response.write(fs.readFileSync('index.html', 'utf-8'));
+        response.write(fs.readFileSync('./index.html', 'utf-8'));
         response.end();
-    } else if (path === '/css/styles.css') {
+    } else if (path === '/style.css') {
         response.statusCode = 200;
-        response.write(fs.readFileSync('css/styles.css', 'utf-8'));
+        response.write(fs.readFileSync('./style.css', 'utf-8'));
         response.end();
-    } else if (path === '/html/biografia.html') {
+    } else if (path === '/biografia.html') {
         response.statusCode = 200;
-        response.write(fs.readFileSync('html/biografia.html', 'utf-8'));
+        response.write(fs.readFileSync('./biografia.html', 'utf-8'));
         response.end();
-    } else if (path === '/html/contacto.html') {
+    } else if (path === '/contacto.html') {
         response.statusCode =200;
-        response.write(fs.readFileSync('html/contacto.html', 'utf-8'));
+        response.write(fs.readFileSync('./contacto.html', 'utf-8'));
         response.end();
-    } else if (path === '/html/portfolio.html') {
+    } else if (path === '/portfolio.html') {
         response.statusCode = 200;
-        response.write(fs.readFileSync('html/portfolio.html', 'utf-8'));
+        response.write(fs.readFileSync('./portfolio.html', 'utf-8'));
         response.end();
     } else {
         response.statusCode = 404;
-        response.write(fs.readFileSync('html/404.html', 'utf-8'));
+        response.write(fs.readFileSync('./404.html', 'utf-8'));
         response.end();
     }
 });
