@@ -8,22 +8,33 @@ const server = http.createServer((request, response) => {
 
     if (path === '/' || path === '/index.html') {
         response.statusCode = 200;
+        response.setHeader('content-Type', 'text/html')
+        //todo ESTO ES DE FORMA ASINCRONA
+        //! if (path === '/' || path === '/index.html')
+        //! fs.readFile('./index.html', (err,data'html' o 'cualquier')=>{
+        //! response.statusCode = 200
+        //! response.setHeader ('content-type', 'text/html"o puede ser 'css'")
+        //!}) 
         response.write(fs.readFileSync('./index.html', 'utf-8'));
         response.end();
     } else if (path === '/style.css') {
         response.statusCode = 200;
+       
         response.write(fs.readFileSync('./style.css', 'utf-8'));
         response.end();
     } else if (path === '/biografia.html') {
         response.statusCode = 200;
+        response.setHeader('content-Type', 'text/html')
         response.write(fs.readFileSync('./biografia.html', 'utf-8'));
         response.end();
     } else if (path === '/contacto.html') {
         response.statusCode =200;
+        response.setHeader('content-Type', 'text/html')
         response.write(fs.readFileSync('./contacto.html', 'utf-8'));
         response.end();
     } else if (path === '/portfolio.html') {
         response.statusCode = 200;
+        response.setHeader('content-Type', 'text/html')
         response.write(fs.readFileSync('./portfolio.html', 'utf-8'));
         response.end();
     } else {
